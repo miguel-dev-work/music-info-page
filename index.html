@@ -26,6 +26,38 @@
           font-size: 3.5rem;
         }
       }
+
+      /*
+      flip card
+      */
+      .card-flip {
+        backface-visibility: hidden;
+        transition: transform 300ms;
+        transition-timing-function: linear;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        display: flex;
+      }
+
+      .card-front {
+        transform: rotateY(0deg);
+      }
+
+      .card-back {
+        transform: rotateY(180deg);
+        position: absolute;
+        top: 0;
+      }
+
+      .card-flip:hover .card-front {
+        transform: rotateY(-180deg);
+      }
+        
+      .card-flip:hover .card-back {
+        transform: rotateY(0deg);
+      }
+
     </style>
 
     
@@ -86,12 +118,16 @@
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col">
-          <div class="card shadow-sm">
-            <img class="bd-placeholder-img card-img-top img-fluid" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Samhain III: November-Coming-Fire" loading="lazy" src="./images/samhainncf.png" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/></img>
-
-            <div class="card-body" >
-              <p class="card-text">Samhain III: November-Coming-Fire is the second studio album by American horror punk band Samhain. It was released in February 1986, through lead singer Glenn Danzig's independent record label, Plan 9.</p>
-              <div class="d-flex justify-content-between align-items-center">
+          <div class="card shadow-lg">
+            <div class="card card-flip card-front h-100">
+            <img class="card-img-top img-fluid" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Samhain III: November-Coming-Fire" loading="lazy" src="./images/samhainncf.png" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/></img>
+            </div>
+            <div class="card card-flip card-back h-100">
+              <img class="bd-placeholder-img card-img-top img-fluid" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Samhain III: November-Coming-Fire" loading="lazy" src="./images/samhainncf back.jpg" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/></img>
+              </div>
+            <div class="card-body ">
+              <p class="card-text h-100 overflow-auto">Samhain III: November-Coming-Fire is the second studio album by American horror punk band Samhain. It was released in February 1986, through lead singer Glenn Danzig's independent record label, Plan 9.</p>
+              <div class="d-flex justify-content-between align-items-center overflow-auto">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">Play</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>  
@@ -102,12 +138,12 @@
           </div>
         </div>
         <div class="col">
-          <div class="card shadow-sm">
+          <div class="card shadow-lg">
             <img class="bd-placeholder-img card-img-top img-fluid" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Killing Joke - Night Time" loading="lazy" src="./images/killing joke.jpeg" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/></img>
             
 
-            <div class="card-body">
-              <p class="card-text">Night Time is the fifth studio album by English post-punk band Killing Joke, released in February 1985.</p>
+            <div class="card-body h-100 overflow-scroll">
+              <p class="card-text ">Night Time is the fifth studio album by English post-punk band Killing Joke, released in February 1985.Night Time is the fifth studio album by English post-punk band Killing Joke, released in February 1985.Night Time is the fifth studio album by English post-punk band Killing Joke, released in February 1985.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
